@@ -37,13 +37,45 @@ h4,
 h5,
 h6 {
     font-family: 'staatliches';
+    margin-bottom: .7rem;
 }
 
+/* =============================================================== Utility ----------------------------------- */
+.category {
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.category-sports {
+    background: #ffa500;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    /* In case if .btn class is applied for a button */
+    border: none;
+    border-radius: .2rem;
+    margin: 1rem 0rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+/* =============================================================== Nav Section ----------------------------------- */
 nav {
     background: #fff;
 }
 
-.container {
+.nav-container {
     max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
@@ -52,31 +84,65 @@ nav {
     align-items: center;
 }
 
-.container .logo {
+.nav-container .logo {
     width: 9rem;
 }
 
-.container .social-link a i {
+.nav-container .social-link a i {
     margin: 0 .5rem;
     color: #777;
 }
 
-.container .link ul {
+.nav-container .link ul {
     display: flex;
 
 }
 
-.container .link ul li a {
+.nav-container .link ul li a {
     padding: .5rem .8rem;
     font-weight: 500;
 }
 
-.container .link ul li a:hover {
+.nav-container .link ul li a:hover {
     background: var(--light-color);
     color: var(--dark-color);
 }
 
-.container .link ul li .current {
+.nav-container .link ul li .current {
     background: var(--primary-color);
     color: #fff;
+}
+
+/* =============================================================== Showcase Section ----------------------------------- */
+header {
+    color: #fff;
+    background: #333;
+    /* Before psuedo selector is placed with in the header */
+    position: relative;
+}
+
+header::before {
+    content: '';
+    background: url('http://drive.google.com/uc?export=view&id=1bwfTxgb1zG43bmAWjLRlt6U8AOi6oVU6') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.showcase-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-container .showcase-content {
+    z-index: 1;
 }
