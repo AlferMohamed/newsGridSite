@@ -20,6 +20,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 ul {
@@ -46,10 +47,19 @@ h6 {
     padding: .4rem 1rem;
     border-radius: 1.2rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .category-sports {
     background: #ffa500;
+}
+
+.category-entertainment {
+    background: #993299;
+}
+
+.category-technology {
+    background: #296da9;
 }
 
 .btn {
@@ -68,6 +78,11 @@ h6 {
 
 .btn-primary:hover {
     opacity: 0.8;
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
 }
 
 /* =============================================================== Nav Section ----------------------------------- */
@@ -145,4 +160,31 @@ header::before {
 
 .showcase-container .showcase-content {
     z-index: 1;
+}
+
+/* =============================================================== Articles section ----------------------------------- */
+main .articles-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+}
+
+main .article-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+/* First child of any element (*) */
+main .article-content>*:first-child,
+main .article-content>*:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-column: 1 / span 2;
+    align-items: center;
+}
+
+main .article-content>*:last-child {
+    grid-column: 2 / span 2;
 }
