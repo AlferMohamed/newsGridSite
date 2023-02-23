@@ -94,7 +94,8 @@ h6 {
     padding: 1rem;
 }
 
-/* =============================================================== Nav Section ----------------------------------- */
+/* index.html
+=============================================================== Nav Section ----------------------------------- */
 nav {
     background: #fff;
 }
@@ -137,7 +138,8 @@ nav {
     color: #fff;
 }
 
-/* =============================================================== Showcase Section ----------------------------------- */
+/* index.html 
+=============================================================== Showcase Section ----------------------------------- */
 header {
     color: #fff;
     background: #333;
@@ -171,7 +173,8 @@ header::before {
     z-index: 1;
 }
 
-/* =============================================================== Articles section ----------------------------------- */
+/* index.html 
+=============================================================== Articles section ----------------------------------- */
 main .articles-container {
     max-width: var(--max-width);
     margin: auto;
@@ -198,7 +201,8 @@ main .article-content>*:last-child {
     grid-column: 2 / span 2;
 }
 
-/* =============================================================== Footer section ----------------------------------- */
+/* index.html
+=============================================================== Footer section ----------------------------------- */
 footer {
     background: var(--dark-color);
     color: #fff;
@@ -241,12 +245,29 @@ footer .footer-container .grid-item input[type='email'] {
     padding: .3rem;
 }
 
-footer .footer-container .grid-item:nth-child(3) {}
-
 footer .footer-container .grid-item:last-child {
     background: #444;
     grid-column: 1 / span 4;
     padding: 0.4rem;
     text-align: center;
     font-size: 0.8rem;
+}
+
+/* about.html
+=============================================================== Article section ----------------------------------- */
+
+article {
+    margin: 2rem 0;
+}
+
+article .articles-container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 2rem;
+}
+
+article .articles-container .grid-item:first-child {
+    grid-row: 1 / span 2;
 }
