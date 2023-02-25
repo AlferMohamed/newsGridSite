@@ -52,14 +52,17 @@ h6 {
 
 .category-sports {
     background: #ffa500;
+    color: #fff;
 }
 
 .category-entertainment {
     background: #993299;
+    color: #fff;
 }
 
 .category-technology {
     background: #296da9;
+    color: #fff;
 }
 
 .btn {
@@ -92,6 +95,14 @@ h6 {
 .card {
     background: #fff;
     padding: 1rem;
+}
+
+.h3-lead {
+    font-size: 2rem;
+}
+
+.bg-secondary {
+    background: #ffa500;
 }
 
 /* index.html
@@ -269,5 +280,46 @@ article .articles-container {
 }
 
 article .articles-container .grid-item:first-child {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
+}
+
+
+/* article.html
+=============================================================== Article section ----------------------------------- */
+#articles {
+    margin: 2rem 0;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 2rem;
+}
+
+#articles .meta {
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+#articles .meta .category {
+    margin-top: 0.8rem;
+}
+
+.container .grid-item:first-child {
+    grid-row: 1 / span 3;
+}
+
+.container .grid-item:nth-child(2) ul {
+    padding-top: 0.6rem;
+}
+
+.container .grid-item:nth-child(2) ul li {
+    margin-bottom: 0.5rem;
+    padding-bottom: .3rem;
+    border-bottom: #555 dotted .1rem;
 }
